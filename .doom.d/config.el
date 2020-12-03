@@ -60,3 +60,15 @@
 
 ;; open links in Emacs Web Wowzer
 (setq browse-url-browser-function 'eww-browse-url)
+(map! :leader
+      :desc "Eww web broswer"
+      "e w" #'eww
+      :leader
+      :desc "Eww reload page"
+      "e R" #'eww-reload
+      :leader
+      :desc "Search web for text between BEG/END"
+      "s w" #'eww-search-words)
+;; projects identified by version control files or .projectile
+;; may manually search with M-x projectile-discover-projects-in-directory
+(setq projectile-project-search-path "~/")
